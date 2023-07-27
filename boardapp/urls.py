@@ -1,7 +1,6 @@
-from django.contrib import admin
 from django.urls import path, include
+from .views import signupfunc
 
 urlpatterns = [
-    path('admin/', admin.sSite.urls),
-    path('', include('boardapp.urls')),
+    path('signup/', signupfunc),
 ]
