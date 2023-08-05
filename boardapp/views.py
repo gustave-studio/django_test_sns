@@ -14,7 +14,7 @@ def signupfunc(request):
             return render(request, 'signup.html', {'some':100})
         except IntegrityError:
             return render(request, 'signup.html', {'error':'このユーザーはすでに登録されています。'})
-    return render(request, 'signup.html', {'some':100})
+    return render(request, 'signup.html')
 
 def loginfunc(request):
     if request.method == "POST":
@@ -27,3 +27,6 @@ def loginfunc(request):
         else:
             return render(request, 'login.html', {'context':'not loged in'})
     return render(request, 'login.html', {'context':'get method'})
+
+def listfunc(request):
+    return render(request, 'list.html', {})
