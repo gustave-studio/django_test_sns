@@ -13,7 +13,7 @@
         <p>タイトル：{{ object.title }}</p>
         <p>投稿者：{{ object.author }}</p>
         <p><img src="{{ object.snsimage.url }}" width="300"></p>
-        <a class="btn btn-primary" role="button" aria-pressed="true">いいねする</a>
+        <a href="{% url 'good' object.pk %}" class="btn btn-primary" role="button" aria-pressed="true">いいねする</a>
         <a class="btn btn-secondary" role="button" aria-pressed="true">既読にする</a>
     </div>
 </div>
